@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ArraysInCsharp
+namespace ArraysInCsharp.ArrayExamples
 {
     public class MultidimensionalArrays
     {
@@ -29,12 +29,15 @@ namespace ArraysInCsharp
         public void Run()
         {
             Console.WriteLine("Multi dimensional Arrays");
-            int[,] arr = new int[3, 3];//declaration of 2D array  
+
+            int[,] arr = new int[3, 3];//declaration of 2D array
             arr[0, 1] = 10;//initialization  
             arr[1, 2] = 20;
             arr[2, 0] = 30;
 
-            Console.WriteLine("Array len: " + arr.Length);
+          
+
+            Console.WriteLine("Array len: " + arr.Length);//3*3 = 9
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)

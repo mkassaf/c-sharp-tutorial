@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ArraysInCsharp
+namespace ArraysInCsharp.ArrayExamples
 {
     public class SimpleArray
     {
@@ -29,10 +29,15 @@ namespace ArraysInCsharp
         public void Run()
         {
             Console.WriteLine("Simple Arrays");
+            
+
+
             int[] arr = new int[5];//creating array  
             arr[0] = 10;//initializing array  
             arr[2] = 20;
             arr[4] = 30;
+
+            Console.WriteLine(arr.Length);
 
             //traversing array  
             for (int i = 0; i < arr.Length; i++)
@@ -51,7 +56,7 @@ namespace ArraysInCsharp
             }
             Console.WriteLine();
             //We can omit the size of array.
-            int[] arr3 = new int[] { 10, 20, 30, 40, 50 };
+            int[] arr3 = new int[] { 10, 20, 30, 40 };
             for (int i = 0; i < arr3.Length; i++)
             {
                 Console.Write(arr3[i] + ",");

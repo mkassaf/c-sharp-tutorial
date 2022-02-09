@@ -1,5 +1,7 @@
 ﻿using System;
-namespace ArraysInCsharp
+
+
+namespace ArraysInCsharp.ArrayExamples
 {
     public class ArrayClass
     {
@@ -56,4 +58,6 @@ namespace ArraysInCsharp
             }
         }
     }
+
+
 }
