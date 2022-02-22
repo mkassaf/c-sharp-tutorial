@@ -148,6 +148,7 @@ foreach (var name in names)
 # Sealed
 - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sealed
 
-
+# C# Coding Conventions
+- https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions?fbclid=IwAR3nP2f-2LcdOcJcT1n8J8uNb6ilLBM2wSD5e3HOPT8a2FdgIeSVhPrKU7A
 
 
