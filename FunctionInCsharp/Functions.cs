@@ -38,5 +38,7 @@ namespace FunctionInCsharp
             val *= val; // Manipulating value
             Console.WriteLine("Value inside the CallFunUsingOutParam function " + val);
         }
+
+
     }
 }
