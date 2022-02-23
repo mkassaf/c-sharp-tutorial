@@ -15,15 +15,46 @@ namespace LambdaExample
              * 
              * */
 
+
+            /**
+             * int GetFive()
+             * {
+             *   return 5;
+             * }
+             */
             Func<int> GetFive =() => 5;
 
             Console.WriteLine(GetFive());
 
-            Action PrintLine = () => Console.WriteLine("____________________");
+            Action PrintLine = () => {
+                Console.WriteLine("____________________");
+                Console.WriteLine("____________________");
+            };
 
+
+            /*
+             * void PrintValue(int value) 
+             * {
+             *   Console.WriteLine($"The value is {value}")
+             * }
+             * 
+             * */
             Action<int> PrintValue = value => Console.WriteLine($"The value is {value}");
 
+
+
+
+
+            /*
+             * int GetSquerSize(int length) 
+             * {
+             *   return length * length;
+             * }
+             * 
+             * */
             Func<int, int> GetSquerSize = (length) => length * length;
+            
+
 
             Func<int, int, int> GetRectSize = (length, width) => length * width;
 

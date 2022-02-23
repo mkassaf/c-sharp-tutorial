@@ -6,6 +6,7 @@ using Users;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace ClassesInCSharp
 {
@@ -13,110 +14,147 @@ namespace ClassesInCSharp
     {
         static void Main(string[] args)
         {
-            AwaitOperator.Main();
+            User user = new AdminUser();
+
+            user.Name = "A";
+            user.Age = 5;
+
+            ((AdminUser)user).Level = "Admin";
+
+            user.PrintData();
+
+            
+            Light light = new Light();
+
+            Control(light);
+
+            TV tv = new TV();
+
+            Control(tv);
 
 
+            Device lamp = new Lamp();
 
+            Device pc = new Laptop();
+
+
+            lamp.Shutdown();
+            pc.Shutdown();
+
+            CallUser(new User());
+            CallUser(new AdminUser()) ;
 
         }
 
+        static  void Control(Switchable device)
+        {
+            device.PowerOn();
 
+            device.PowerOff();
+        }
 
-        internal void test()
+        static void CallUser(User user)
         {
 
         }
+
     }
-    class File
+
+    class User
     {
+        public string Name { get; set; }
+        public long Age { get; set; }
 
-        private readonly string readOnly = "dddd";
-        private string _name; 
-        public string Name {
-            get
-            {
-                if (string.IsNullOrWhiteSpace(_name))
-                {
-                    return "N/A";
-                }
-                return _name;
-
-            }
-            set
-            {
-                if (string.IsNullOrWhiteSpace(value))
-                {
-                    throw new ArgumentException("Value can't be Epmty");
-                }
-                _name = value;
-            }
-        }
-
-
-        public string Path { get; set; }
-
-
-
-        public virtual  void SetValues()
+        public virtual void PrintData()
         {
-            Console.WriteLine("Calling from the super");
-
+            Console.WriteLine($" {Name} , {Age}");
         }
-
-
 
     }
 
-
-    class TextFile : File
+    class AdminUser : User
     {
-        List<int> myList;
-        public TextFile()
-        {
-            Console.WriteLine("Defaul Cont");
-            myList = new List<int>();
-        }
-        public TextFile(int id) : this()
-        {
-            Console.WriteLine("Param Cont");
-        }
-        public override void SetValues()
-        {
-            base.SetValues();
+        public string Level { get; set; }
 
-            Console.WriteLine("Calling from child");
+        public void PrintData()
+        {
+            base.PrintData();
+            Console.WriteLine($"{Level}");
         }
-
-
     }
 
-
-
-
-}
-
-
-public class AwaitOperator
-{
-    public static async Task Main()
+    class Light : Switchable
     {
-        Task<int> downloading = DownloadDocsMainPageAsync();
-        Console.WriteLine($"{nameof(Main)}: Launched downloading.");
-
-        int bytesLoaded = 0;
-        Console.WriteLine($"{nameof(Main)}: Downloaded {bytesLoaded} bytes.");
+        public  void PowerOn()
+        {
+            Console.WriteLine($" {this.GetType()} Power on");
+        }
+        public void PowerOff()
+        {
+            Console.WriteLine($" {this.GetType()} Power off");
+        }
     }
 
-    private static async Task<int> DownloadDocsMainPageAsync()
+    class TV : Switchable
     {
-        Console.WriteLine($"{nameof(DownloadDocsMainPageAsync)}: About to start downloading.");
-
-        var client = new HttpClient();
-        byte[] content = await client.GetByteArrayAsync("https://docs.microsoft.com/en-us/");
-
-        Console.WriteLine($"{nameof(DownloadDocsMainPageAsync)}: Finished downloading.");
-        return content.Length;
+        public void PowerOn()
+        {
+            Console.WriteLine($" {this.GetType()} Power on");
+        }
+        public void PowerOff()
+        {
+            Console.WriteLine($" {this.GetType()}  Power off");
+        }
     }
+
+    interface Switchable
+    {
+        public void PowerOn();
+        public void PowerOff();
+    }
+
+    abstract class Device
+    {
+        public void Shutdown()
+        {
+            Console.WriteLine("Shutdown the device..");
+            /**
+             * 
+             * 
+             * 
+             * 
+             * */
+            OnShutdown();
+        }
+
+        protected abstract void OnShutdown();
+    }
+
+    class Lamp : Device
+    {
+        protected override void OnShutdown()
+        {
+            Console.WriteLine("Lamp .. ");
+        }
+    }
+
+    class Laptop : Device
+    {
+        protected override void OnShutdown()
+        {
+            Console.WriteLine("LAptop ... .. ");
+        }
+    }
+
+
+    sealed class MyFinalClass
+    {
+        public String MyProperty { get; set; }
+    }
+
+    
+
+
 }
 
 
