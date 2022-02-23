@@ -151,4 +151,16 @@ foreach (var name in names)
 # C# Coding Conventions
 - https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions?fbclid=IwAR3nP2f-2LcdOcJcT1n8J8uNb6ilLBM2wSD5e3HOPT8a2FdgIeSVhPrKU7A
 
+# => operator (C# reference)
+- https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-operator
+
+# Lambda expressions (C# reference)
+- https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions 
+- https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions 
+
+# Delegates
+- https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/
+
+# Task.Run 
+- https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.run?view=net-6.0
 
