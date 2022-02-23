@@ -161,3 +161,6 @@ foreach (var name in names)
 # Delegates
 - https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/
 
+# Task.Run 
+- https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.run?view=net-6.0
+
