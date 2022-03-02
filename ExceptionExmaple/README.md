@@ -4,14 +4,6 @@
 
 
 
-
-
-## Exception Handling   
-
-- https://github.com/mkassaf/c-sharp-tutorial/tree/main/ArraysInCsharp
-- https://www.javatpoint.com/c-sharp-arrays 
-
-
 ```ruby
 try
 {
