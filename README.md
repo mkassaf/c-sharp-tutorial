@@ -164,3 +164,8 @@ foreach (var name in names)
 # Task.Run 
 - https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.run?view=net-6.0
 
+# ObservableCollection<T> Class
+- https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0
+  
+# readonly (C# Reference)
+- https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly
