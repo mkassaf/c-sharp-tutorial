@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 
 namespace Hello
 {
@@ -6,26 +8,36 @@ namespace Hello
     {
         static void Main(string[] args)
         {
-            String s = "assaf";
-            String s2 = "assaf";
+            ObservableCollection<string> collection = new ObservableCollection<string>();
+            collection.CollectionChanged += CollectionChanged;
 
-            string s3 = "assaf";
-            string s4 = "assaf";
-            Console.WriteLine(s==s3);
-            Console.WriteLine(s3 == s4);
+            collection.Add("C");
+            collection.Add("C++");
+            collection.Add("Python");
+            collection.Add("C#");
+            collection.Add("Java");
+
+            collection.Remove("C++");
+            collection.Remove("Python");
+        }
+
+        private static void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            ObservableCollection<string> collection = (ObservableCollection<string>)sender;
+            Console.WriteLine($"sender {e.Action}");
+
+            if(e.Action.Equals(NotifyCollectionChangedAction.Add))
+            {
+                Console.WriteLine($"NewItems {e.NewStartingIndex}");
+                Console.WriteLine($"Add iteam {collection[e.NewStartingIndex]}");
+            }
+            else if (e.Action.Equals(NotifyCollectionChangedAction.Remove))
+            {
+                Console.WriteLine($"REMOVED INDEX {e.OldStartingIndex}");
+                Console.WriteLine($"Removed index {e.OldItems[e.OldStartingIndex-1]}");
+            }
+
+
         }
     }
-
-
-    namespace hw1 {
-        public class Searcher {
-            public void GetInt() {
-                System.Console.WriteLine("insert text: ");
-                String text = Console.ReadLine(); string number = "";
-                for (int i = 0; i < text.Length; i++) { if (text[i] >= 48 && text[i] <= 57)
-                    { number = number + text[i].ToString(); while (i + 1 < text.Length && text[i + 1] >= 48 && text[i + 1] <= 57)
-                        { number += text[i + 1].ToString(); i++; } break; } }
-                Console.WriteLine("number is :" + number);
-            } } }
-
 }

@@ -76,7 +76,6 @@ namespace ExceptionExmaple
             {
                 //NullPathExceptionNu
                 throw new NullPathException("The path is null");
-
             }
             else if (path.Equals(String.Empty))
             {
