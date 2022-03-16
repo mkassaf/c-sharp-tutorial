@@ -172,3 +172,9 @@ foreach (var name in names)
    
 # using statement 
 - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement
+   
+# Handle and raise events
+
+- https://docs.microsoft.com/en-us/dotnet/standard/events/
+- https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/event
+   
