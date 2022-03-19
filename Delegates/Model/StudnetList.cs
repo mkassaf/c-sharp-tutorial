@@ -11,14 +11,14 @@ namespace Delegates.Model
 
         public delegate void PrintDelagate();
 
-        public PrintDelagate Print ;
+        public event PrintDelagate Print ;
 
 
         public delegate void StudentDelegate(Student student);
 
 
-        public StudentDelegate OnAdd;
-        public StudentDelegate OnRemove;
+        public event StudentDelegate OnAdd;
+        public event StudentDelegate OnRemove;
 
 
         public StudnetList()
