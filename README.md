@@ -150,6 +150,8 @@ foreach (var name in names)
 
 # C# Coding Conventions
 - https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions?fbclid=IwAR3nP2f-2LcdOcJcT1n8J8uNb6ilLBM2wSD5e3HOPT8a2FdgIeSVhPrKU7A
+- https://www.dofactory.com/csharp-coding-standards
+- https://github.com/ktaranov/naming-convention/blob/master/C%23%20Coding%20Standards%20and%20Naming%20Conventions.md
 
 # => operator (C# reference)
 - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-operator
