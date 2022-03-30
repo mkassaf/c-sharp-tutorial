@@ -19,6 +19,8 @@ namespace Hello
 
             collection.Remove("C++");
             collection.Remove("Python");
+
+            Console.WriteLine(3.5/2);
         }
 
         private static void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)

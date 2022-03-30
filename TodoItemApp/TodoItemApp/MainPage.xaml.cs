@@ -17,12 +17,14 @@ namespace TodoItemApp
         }
 
 
-        public async void CompleteCheckboxChanged(System.Object sender, Xamarin.Forms.CheckedChangedEventArgs e)
+        public void CompleteCheckboxChanged(System.Object sender, Xamarin.Forms.CheckedChangedEventArgs e)
         {
             var cb = (CheckBox)sender;
-            var newTodoIteam = (TodoItem)cb.BindingContext;
+            var updatedTodoIteam = (TodoItem)cb.BindingContext;
 
-            Console.WriteLine($" Complete {newTodoIteam.Complete}");
+            Console.WriteLine($" Complete {updatedTodoIteam.Complete}");
+
+            App.Database.UpdateTodoIteamAsync(updatedTodoIteam);
 
         }
 
@@ -31,15 +33,6 @@ namespace TodoItemApp
             todoInput.Text = String.Empty;
         }
 
-        void NewTodoListChanged(Object sender, EventArgs e)
-        {
-            
-        }
-
-        void todoInput_BindingContextChanged(System.Object sender, System.EventArgs e)
-        {
-            todoInput.Text = String.Empty;
-        }
     }
 
 

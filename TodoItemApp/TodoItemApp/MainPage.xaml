@@ -17,7 +17,7 @@
                     Text="{Binding NewTodoInputValue}"
                     Placeholder="Enter the todo"
                     ReturnCommand="{Binding AddTodoCommand}"
-                    ClearButtonVisibility="WhileEditing" 
+                    ClearButtonVisibility="WhileEditing"
                     
                     />
             </StackLayout>
