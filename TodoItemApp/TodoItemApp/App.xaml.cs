@@ -8,7 +8,7 @@ namespace TodoItemApp
 {
     public partial class App : Application
     {
-        private static SQLiteDatabase database;
+        private static MyDatabase database;
         private static readonly String DatabasePath = "myDb.assaf";
 
 
@@ -20,15 +20,23 @@ namespace TodoItemApp
         }
 
 
-        public static SQLiteDatabase Database {
+        public static MyDatabase Database {
             get {
                 if(database == null)
                 {
+                    database = new MySqlDatabase(
+                        Path.Combine(
+                            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                        DatabasePath)
+                        );
+                    /*
                     database = new SQLiteDatabase(
                         Path.Combine(
                             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                         DatabasePath)
                         );
+
+                    */
                 }
                 return database;
             }

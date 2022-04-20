@@ -82,7 +82,7 @@ namespace TodoItemApp
 
             //TodoItems.Add(newTodoItem);
             firebaseClient.Child(TableName).PostAsync(newTodoItem);
-            //App.Database.InsertTodoIteamAsync(newTodoItem);
+            App.Database.InsertTodoIteamAsync(newTodoItem);
         }
 
         public ICommand RemoveTodoCommand => new Command(RemoveTodoItem);
