@@ -9,16 +9,16 @@ namespace TodoItemApp.Database
     public interface MyDatabase
     {
 
-        public void Init(String dbPath);
+        void Init(String dbPath);
 
-        public Task<List<TodoItem>> GetTodoItemsAsync();
+        Task<List<TodoItem>> GetTodoItemsAsync();
 
-        public Task InsertTodoIteamAsync(TodoItem todoItem);
+        Task InsertTodoIteamAsync(TodoItem todoItem);
 
-        public Task DeleteTodoIteamAsync(TodoItem todoItem);
+        Task DeleteTodoIteamAsync(TodoItem todoItem);
 
-        public Task UpdateTodoIteamAsync(TodoItem todoItem);
+        Task UpdateTodoIteamAsync(TodoItem todoItem);
 
-        public Task ExecuteAsync(String query);
+        Task ExecuteAsync(String query);
     }
 }
