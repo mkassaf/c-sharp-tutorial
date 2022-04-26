@@ -15,7 +15,7 @@ namespace TodoItemApp
     public class TodoListViewModel
     {
 
-        FirebaseClient firebaseClient = new FirebaseClient("https://tododatabase-4449e-default-rtdb.europe-west1.firebasedatabase.app/");
+        FirebaseClient firebaseClient = new FirebaseClient("https://tododatabase-4449e-default-rtdb.europe-west1.firebasedatabase.app/2");
         public ObservableCollection<TodoItem> TodoItems { get; set; }
         public static readonly string TableName = "TodoItem";
 
@@ -37,6 +37,10 @@ namespace TodoItemApp
                     TodoItems.Add(todoItem);
                 }
                 */
+                var collection2 = firebaseClient.Child(TableName).AsObservable<TodoItem>().AsObservableCollection<TodoItem>();
+
+                Console.WriteLine($"collection2 {collection2}");
+
                 var collection = firebaseClient.Child(TableName).AsObservable<TodoItem>().Subscribe((dbevent) =>
                 {
                     if (dbevent.Object != null)
