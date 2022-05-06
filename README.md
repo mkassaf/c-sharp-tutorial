@@ -128,7 +128,9 @@ foreach (var name in names)
 - https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers
 
 ## Static
-- https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/exceptions/exception-handling
+- https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members
+- https://www.geeksforgeeks.org/static-keyword-in-c-sharp/#:~:text=Static%20Variable&text=When%20a%20variable%20is%20declared,C%23
+- 
 
 ## Abstract
 - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract
