@@ -46,6 +46,10 @@ https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/numbers-
 	public static int mul(int x,int y){
 		return x*y;
 	}
+	public static int divide(int x,int y){
+		return x/y;
+	}
+
 ```
 
 ## Array 
