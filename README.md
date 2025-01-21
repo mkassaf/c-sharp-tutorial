@@ -43,6 +43,10 @@ https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/numbers-
             val *= val; // Manipulating value
             Console.WriteLine("Value inside the CallFunUsingOutParam function " + val);
         }
+	public void int mul(int x, int y){
+		return x*y;
+	}
+
 ```
 
 ## Array 
