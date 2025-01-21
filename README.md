@@ -6,6 +6,7 @@ https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/
 ## Manipulate integral and floating point numbers:**
 https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/numbers-in-csharp
 
+## Added some functionality methods to the main Method
 
 
 ## Function
