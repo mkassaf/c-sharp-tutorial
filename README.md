@@ -6,6 +6,7 @@ https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/
 ## Manipulate integral and floating point numbers:**
 https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/numbers-in-csharp
 
+## Added some functionality methods to the main Method
 
 
 ## Function
@@ -43,6 +44,17 @@ https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/numbers-
             val *= val; // Manipulating value
             Console.WriteLine("Value inside the CallFunUsingOutParam function " + val);
         }
+
+	public void int mul(int x, int y){
+		return x*y;
+	}
+	public static int divide(int x,int y){
+		return x/y;
+	}
+	public static int sum(int x,int y){
+		return x+y;
+	}
+
 ```
 
 ## Array 
